@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from pickle import TRUE
 from odoo import models, fields, api
 class lista_de_tareas(models.Model):
     _name = 'lista_de_tareas.lista_de_tareas'
@@ -26,4 +27,11 @@ class lista_de_tareas(models.Model):
                 record.urgente = True
             else:
                 record.urgente = False
-   
+ #   currentDate = Date.context_today()
+  #  @api.depends('fechaFin')
+   # def _value_realizada(self):
+    #    for record in self:
+     #       if record.fechaFin>=currentDate:
+      #          record.realizada = True
+       #     else:
+        #        record.realizada = False
