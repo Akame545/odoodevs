@@ -6,12 +6,14 @@
       <field name="name">lista_de_tareas</field>
       <field name="model">lista_de_tareas.lista_de_tareas</field>
       <field name="arch" type="xml">
-        <tree>
-          <field name="tarea"/>
-          <field name="prioridad"/>
-          <field name="urgente"/>
-          <field name="fechaFin"/>
+        <tree decoration-success="realizada == True">
+          
           <field name="realizada"/>
+          <field name="urgente"/>
+          <field name = "avatar" widget="image" class="oe_avatar"/>
+          <field name="tarea"/>
+          <field name="prioridad" widget="percentpie"/>
+          <field name="fecha"/>
         </tree>
       </field>
     </record>
