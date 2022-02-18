@@ -17,6 +17,22 @@
         </tree>
       </field>
     </record>
+    <!-- Definimos como es la vista explicita de otro formato de view (por hacer)-->
+    <record model="ir.ui.view" id="lista_de_tareas.list">
+      <field name="name">lista_de_tareas</field>
+      <field name="model">lista_de_tareas.lista_de_tareas</field>
+      <field name="arch" type="xml">
+        <tree decoration-success="realizada == True">
+          
+          <field name="realizada"/>
+          <field name="urgente"/>
+          <field name = "avatar" widget="image" class="oe_avatar"/>
+          <field name="tarea"/>
+          <field name="prioridad" widget="percentpie"/>
+          <field name="fecha"/>
+        </tree>
+      </field>
+    </record>
 
 
     <!-- actions opening views on models -->
